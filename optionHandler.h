@@ -6,10 +6,10 @@ class option
 
     public: 
     int Menu();
+    private:
     void EnterPassword();
     void RetreivePass();
 
-    private:
     void AppendPasswords(string PASS);
     string hashPassword(const string& password);
 
