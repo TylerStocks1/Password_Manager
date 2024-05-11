@@ -7,35 +7,11 @@ using namespace std;
 
 int main()
 {
-    
-    string PASS;    
-    int USR_OPTION;
+    option choice;
 
-    cout << "What do you want to do?\n";
-    cout << "1. Enter a password\n" << "2. Retreive a password\n" << "3. Check passwords\n";
-    cout << "Option: ";
-    cin >> USR_OPTION;
+    choice.Menu();
 
-    option Choice;
-
-    switch (USR_OPTION)
-    {
-    case 1:
-        Choice.EnterPassword();
-        break;
-    
-    case 2:
-        Choice.RetreivePass();
-        break;
-    
-    case 3:
-        
-        break;
-    
-    default:
-        cout << "Invalid option";
-        break;
-    }
-
+    if (choice.Menu() == 0)
     return 0;
+
 }

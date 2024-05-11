@@ -5,6 +5,7 @@ class option
 {
 
     public: 
+    int Menu();
     void EnterPassword();
     void RetreivePass();
 

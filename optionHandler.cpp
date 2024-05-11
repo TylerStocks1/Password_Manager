@@ -8,6 +8,38 @@
 using namespace std;
 string FILE_NAME = "password.txt";
 
+int option::Menu()
+{
+    string PASS;    
+    int USR_OPTION;
+
+    cout << "What do you want to do?\n";
+    cout << "1. Enter a password\n" << "2. Retreive a password\n" << "3. Check passwords\n" << "4. Exit \n";
+    cout << "Option: ";
+    cin >> USR_OPTION;
+
+    switch (USR_OPTION)
+    {
+    case 1:
+       EnterPassword();
+        break;
+    
+    case 2:
+        RetreivePass();
+        break;
+    case 3:
+        
+        break;
+    case 4:
+        return 0;
+        break;
+    default:
+        cout << "Invalid option";
+        break;
+    }
+
+}
+
 void option::EnterPassword()
 {
     string Password;
@@ -36,6 +68,7 @@ void option::EnterPassword()
         AppendPasswords(Password);
     }
     outputFile.close();
+    Menu();
 }
 
 void option::RetreivePass()
@@ -73,6 +106,8 @@ void option::RetreivePass()
     { 
         cout << "No Password file found!\n";   
     }
+
+    Menu();
 }
 
 void option::AppendPasswords(string PASS)
@@ -85,7 +120,7 @@ void option::AppendPasswords(string PASS)
     }
 
     outputFile << PASS << std::endl;
-
+    Menu();
 }
 
 string option::hashPassword(const string &password)
@@ -120,5 +155,6 @@ string option::hashPassword(const string &password)
     }
 
     return hashedPassword;
+    Menu();
 }
 
