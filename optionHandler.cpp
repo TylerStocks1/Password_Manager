@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <openssl/sha.h>
-
+ 
 #include "optionHandler.h"
 
 using namespace std;
